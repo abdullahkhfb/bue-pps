@@ -1,0 +1,5 @@
+Yoghurt 5 25
+coffee 50 20000
+icecream 7 210
+salad 16 1920
+Total payment is 22155

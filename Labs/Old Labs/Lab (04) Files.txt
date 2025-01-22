@@ -1,0 +1,163 @@
+Problem 1: 
+
+program 1:
+
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main(){
+  ofstream file;
+  string fname;
+
+  cout <<"enter file name (it should not contain spaces): ";
+  cin>>fname;
+
+  file.open(fname + ".txt");
+
+  for(int i=1; i<=10000; i++)
+    file << i << endl;
+}
+
+program 2:
+
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main(){
+  ofstream file;
+  string fname, name, date, id;
+
+  cout <<"enter file name (it should not contain spaces): ";
+  cin>>fname;
+
+  file.open(fname + ".txt");
+
+  cin.ignore(256, '\n');
+  
+  cout <<"Enter your name: ";
+  getline(cin, name);
+
+
+  cout << "Enter Your date of birth: ";
+  getline(cin,date);
+
+  cout <<"Enter your ID: ";
+  cin>>id;
+
+  file << name << endl << date << endl << id <<endl;
+  
+}
+
+Problem 2:
+
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+void write(string s) {
+  fstream file;
+  file.open(s + ".txt", ios::out);
+  file << "HELLO";
+  file.close();
+}
+void read(string& s) {
+  fstream file;
+  file.open(s + ".txt", ios::in);
+  file >> s;
+  file.close();
+}
+int main() {
+  string newfile = "newfile";
+  write(newfile);
+  read(newfile);
+  cout << newfile;
+  return 0;
+}
+
+
+Problem 3:
+
+Program 1:
+
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+//This function appends a new text to a file in a new line.
+//The first parameter is the file name.
+//The second parameter is the new text to be added to the file.
+void write(string fileName, string fileInput) {
+  ofstream file;
+
+  file.open(fileName,ios::app);
+
+  file << fileInput <<endl;
+
+  file.close();
+  
+}
+int main() {
+string name;
+cout << "Enter the names of 5 students \n";
+ for (int i = 0; i < 5; i++){
+ cout << "Enter the name of student " << i+1 << " : ";
+ getline(cin, name);
+ write("studdentNames.txt", name);
+ }
+ return 0;
+}
+
+
+Program 2: 
+
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+string originalFile = "originalFile.txt";
+string copyFile = "copyFile.txt";
+string text = "ahmed@bue.edu.eg\nsamir@bue.edu.eg\nmona@bue.edu.eg\n";
+string parseEmail(string);
+void copyNames();
+int main() {
+ ofstream file;
+ file.open(originalFile);
+ file << text;
+ file.close();
+ copyNames();
+ //print the text in the file copyFile.
+ return 0;
+}
+string parseEmail(string s) {
+ return s.substr(0, s.find('@'));
+}
+//This function creates a file
+void copyNames() {
+ //open the file defined in the variable originalFile
+ //loop on each line in this file
+ //In each iteration, do the following:
+  ifstream file;
+  file.open(originalFile,ios::in);
+ // define two variables ‘s’ and ‘name’ of type string
+   string s, name;
+  while(getline(file ,s))
+ {
+
+// read the Email in the line and assign it to "s".
+   
+   
+
+// call the function parsEmail() and pass "s" to it.
+   name = parseEmail(s);
+
+// Assign the result of the function to variable name.
+
+// Append the text in name to file copyFile.
+   cout << name <<endl;
+
+ }
+}

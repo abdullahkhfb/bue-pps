@@ -1,0 +1,4 @@
+Yoghurt 5.0
+coffee 400.0
+icecream 30.0
+salad 120.0

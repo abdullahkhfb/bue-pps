@@ -1,0 +1,5 @@
+Ayanokōji 198542 57.4
+Karuizawa 193847 75.8
+Horikita 198734 93.6
+
+Class Average: 75.6
