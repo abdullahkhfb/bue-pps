@@ -101,22 +101,7 @@ New Labs Code/
 ## 📄 License
 
 MIT License
-
-Copyright (c) 2025 The British University in Egypt (BUE)
-
-This repository contains educational materials and code examples for the Introduction to Programming and Problem Solving course at BUE. The materials are available under MIT license terms which allow:
-
-- ✅ Commercial use
-- ✅ Modification
-- ✅ Distribution
-- ✅ Private use
-
-Subject to the following conditions:
-
-- Include the original copyright notice
-- Include the MIT license text
-
-See [LICENSE.md](LICENSE.md) for full license details.
+See [LICENSE.md](LICENSE) for full license details.
 
 ## 🌟 Join Our Community
 
