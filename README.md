@@ -31,7 +31,7 @@ A rich collection of C++ programming exercises designed to build strong programm
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/abdullahkhfb/BUE-Introduction-to-Programming-and-Problem-Solving.git
+git clone https://github.com/abdullahkhfb/bue-pps.git
 ```
 
 2. Navigate to project directory:
